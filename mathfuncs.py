@@ -37,6 +37,19 @@ def factors(n):
             factors.append(factor)
     return factors
 
+def multipliers(n):
+    """
+    Takes th facotrs and turns them into a x*y format:
+    e.g  input 8 output: {8:1, 4:2, 2:4, 1:8}
+    """
+
+    factor = factors(n)
+    multiples = {}
+    for i in range(len(factor)):
+        multiples[factor[i]] = factor[len(factor) - 1 - i]
+    
+    return multiples
+
 def power_of_3(n):
 
     """

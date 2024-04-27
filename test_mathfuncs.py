@@ -40,5 +40,10 @@ class TestMathFunctionMethods(unittest.TestCase):
         self.assertEqual(mf.power_of_3(243), 5.0)
         self.assertEqual(mf.power_of_3(44234), False)
         self.assertEqual(mf.power_of_3(44423434), False)
+    
+
+    def test_multipliers(self):
+        self.assertEqual(mf.multipliers(8), {1:8, 2:4, 4:2, 8:1})
+        self.assertEqual(mf.multipliers(3), {1:3, 3:1})
 if __name__ == '__main__':
     unittest.main()
